@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            padding: 40px 10px;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            text-align: center;
+            font-size: 0.10em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+                button {
+            width: 100%;
+            padding: 12px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        small {
+            color: #888;
+            font-size: 0.10em;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        </style>
+</head>
+<body>
+  <form>
+        <h2>Class Registration Form</h2>
+        <p class="subtitle">Please fill out the form below to register for our class</p>
+        <div class="input-group">
+            <input type="text" name="firstName" placeholder="First Name" required />
+            <input type="text" name="lastName" placeholder="Last Name" required />
+        </div>
+        
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+        </div>
+        
+        <label for="classLevel">Class Level</label>
+        <select name="classLevel" id="classLevel" required>
+            <option value="" disabled selected>Select your class level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        
+        <small> Please choose the appropriate level for your experience </small>
+        <label> Class Days </label>
+        <small> Please select the days you are available to attend class </small>
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="days" value="monday" /> Monday</label>
+            <label><input type="checkbox" name="days" value="tuesday" /> Tuesday</label>
+            <label><input type="checkbox" name="days" value="wednesday" /> Wednesday</label>
+            <label><input type="checkbox" name="days" value="thursday" /> Thursday</label>
+            <label><input type="checkbox" name="days" value="friday" /> Friday</label>
+            <label><input type="checkbox" name="days" value="saturday" /> Saturday</label>
+        </div>
+        
+        <div class="terms">
+            <input type="checkbox" name="terms" id="terms" required />
+            <label for="terms"> I agree to the terms and conditions of the class registration</label>
+        </div>
+        <button type="submit">Register Now!</button>
+    </form>
+</body>
+</html>

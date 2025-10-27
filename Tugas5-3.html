@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Membership Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 25px 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .form-container h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .form-container p.subtitle {
+            font-size: 13px;
+            color: #5a5a5a;
+            margin-bottom: 25px;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .two-columns {
+            display: flex;
+            gap: 10px;
+        }
+        .two-columns > div {
+            flex: 1;
+        }
+        .membership-type,
+        .interests {
+            margin-bottom: 20px;
+        }
+        .membership-type label,
+        .interests label {
+            font-weight: 500;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: vertical;
+            height: 60px;
+        }
+        .terms {
+            margin-bottom: 20px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 7px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form class="form-container">
+        <h2>Membership Registration Form</h2>
+        <p class="subtitle">Please fill out the form below to become a member.</p>
+
+        <div class="two-columns">
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+            </div>
+        </div>
+
+        <div class="two-columns">
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+            </div>
+        </div>
+
+        <label for="address1">Address Line 1</label>
+        <input type="text" id="address1" name="address1" placeholder="Enter your address line 1" required />
+
+        <label for="address2">Address Line 2</label>
+        <input type="text" id="address2" name="address2" placeholder="Enter your address line 2" />
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+            <option value="United States of America" selected>United States of America</option>
+            <option value="Japan">Japan</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Spain">Spain</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="China">China</option>
+        </select>
+
+        <div class="membership-type">
+            <label>Membership Type</label><br />
+            <label><input type="radio" name="membershipType" value="Basic" required /> Basic</label>
+            <label><input type="radio" name="membershipType" value="Premium" /> Premium</label>
+            <label><input type="radio" name="membershipType" value="Elite" /> Elite</label>
+        </div>
+
+        <div class="interests">
+            <label>Interests</label><br />
+            <span>Favorite Sports</span><br />
+            <label><input type="checkbox" name="sports" value="Football" /> Football</label>
+            <label><input type="checkbox" name="sports" value="Basketball" /> Basketball</label><br />
+            <label><input type="checkbox" name="sports" value="Badminton" /> Badminton</label>
+            <label><input type="checkbox" name="sports" value="Bowling" /> Bowling</label><br />
+            <label><input type="checkbox" name="sports" value="Volley" /> Volley</label>
+            <label><input type="checkbox" name="sports" value="Tennis" /> Tennis</label>
+        </div>
+
+        <label for="whyJoin">Why do you want to become a member?</label>
+        <textarea id="whyJoin" name="whyJoin" placeholder="Please tell us why you want to join"></textarea>
+
+        <div class="terms">
+            <label>
+                <input type="checkbox" name="terms" required />
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+</body>
+</html>
